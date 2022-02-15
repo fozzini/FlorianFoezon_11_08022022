@@ -7,12 +7,13 @@ import Home from "./pages/Home";
 
 const App = () => {
   return (
+    
     <BrowserRouter>
      <Routes>
-       <Route Route path='/home' element={Home}/>
-       <Route Route path='/fiche-logement' element={FicheLogement}/>
-       <Route Route path='/erreur"404"' element={Error}/>
-       <Route Route path='/à-propos' element={Apropos}/>
+       <Route path='/' element={< Home />}/>
+       <Route path='/fiche-logement' element={<FicheLogement/>}/>
+       <Route path='/à-propos' element={<Apropos/>}/>
+       <Route path='*' element={<Error/>}/>
      </Routes>
     </BrowserRouter>
   );
