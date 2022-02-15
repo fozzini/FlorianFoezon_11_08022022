@@ -5,8 +5,8 @@ const Home = () => {
   return (
     <div>
       <Header/>
+        <h2>Page d'acceuil</h2>
       <Footer/>
-      <h2>Page d'acceuil</h2>
     </div>
   );
 };
