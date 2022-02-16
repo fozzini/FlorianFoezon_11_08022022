@@ -5,27 +5,29 @@ $font-1: "Montserrat", sans-serif;
 $color-1: #FF6060;
 $color-2: #000000;
 $color-3: #FFFFFF;
+$color-4: #F6F6F6;
+
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+html {overflow: scroll;}
 body {
-  margin: 0.4rem auto;
-  max-width: 1296px;
+  height:100%;
+	width:100%;
   font-family: $font-1;
-  color: $color-2;
-  background-color: $color-3;
+}
+section {
+  padding-left: 60px;
+  padding-right: 60px;
 }
 li {
   list-style-type: none;
 }
 a {
   text-decoration: none;
-  color: $color-2;
+ 
   cursor: pointer;
-}
-a:visited {
-  color: $color-2;
 }

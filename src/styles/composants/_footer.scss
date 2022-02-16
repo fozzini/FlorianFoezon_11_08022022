@@ -1,4 +1,19 @@
 .Footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
     background-color: $color-2;
     color: $color-3;
+    font-size: 10px;
+    position:fixed;
+    bottom:0px;
+    width: 100%;
+
+    img{
+        width:100px;
+        padding-bottom: 30px;
+    }
 }
