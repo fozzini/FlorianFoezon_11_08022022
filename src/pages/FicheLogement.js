@@ -1,14 +1,24 @@
+import { useParams } from 'react-router-dom';
 import Footer from "../composants/Footer";
 import Header from "../composants/Header";
 
-const FicheLogement = () => {
+const FicheLogement = ({data}) => {
+    const { id } = useParams();
   return (
     <div>
       <Header/>
+      {data
+        .filter((list) => list.id === id)
+        .map((list) => (
+          <div className="full-card" key={ list.id }>
+            <h2>Name: {list.title}</h2>
+          </div>
+        )
+        )
+      }
       <Footer/>
-      <h1>fiche logement</h1>
     </div>
-  );
+  )
 };
 
 export default FicheLogement;

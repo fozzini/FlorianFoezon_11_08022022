@@ -7,7 +7,7 @@ import { FaAngleDown } from 'react-icons/fa';
 const Accordeon = () => {
     return (
         <ul className="accordion">
-          {AccordeonData.map(({ heading, content }) => (<Accordion heading={heading} content={content} />))}
+          {AccordeonData.map(({ heading, content }) => (<Accordion key={content} heading={heading} content={content} />))}
         </ul>
     );
 };

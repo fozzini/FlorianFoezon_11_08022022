@@ -1,9 +1,13 @@
 
-const Card = () => {
+
+const Card = ({accomodation}) => {
   return (
+    
     <div className="Card">
-      <div className="CardTitle"><h3>Titre de la location</h3></div>
+      <img src={accomodation.cover} alt="logement"/>
+      <div className="CardTitle"><h3>{accomodation.title}</h3></div>
     </div>
+    
   );
 };
 
