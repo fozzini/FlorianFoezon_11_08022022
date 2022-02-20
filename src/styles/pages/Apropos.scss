@@ -1,12 +1,12 @@
 .Apropos{
+  height: auto;
+  padding-bottom: 300px;
  .Section{
     height: 223px;
     position: relative;
-    
     .Banner{
       display: flex;
       height: 98%;
-      
       filter: brightness(0.5);
       img{
         width: 100%;
@@ -16,6 +16,9 @@
       }
     }
   }
+  ul{
+    display:flex;
+    padding-bottom:400px;}
 }
 
 

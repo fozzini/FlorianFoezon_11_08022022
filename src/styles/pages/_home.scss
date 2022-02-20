@@ -1,10 +1,22 @@
 .Home{
   width: 100%;
   margin-bottom: 200px;
+  .Banner{
+      display: flex;
+      height: 98%;
+      filter: brightness(0.5);
+      img{
+        width: 100%;
+        background-size: 100%;
+        border-radius: 25px;
+        object-fit: cover;
+      }
+  }
   .Section{
     height: 223px;
     position: relative;
-    h3{
+    .cardTitle{
+      h3{
         font-style: normal;
         font-weight: 500;
         font-size: 48px;
@@ -21,34 +33,18 @@
         align-items: center;
         justify-content: center;   
       }
-
-    .Banner{
-      display: flex;
-      height: 98%;
-      
-      filter: brightness(0.5);
-      img{
-        width: 100%;
-        background-size: 100%;
-        border-radius: 25px;
-        object-fit: cover;
-      }
     }
   }
   .Cards{
-    
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 50px;
     padding: 50px;
     justify-content: space-evenly ;
     height: auto;
-    flex-wrap: wrap;
     background-color: $color-4;
     border-radius: 25px;
     margin:30px 60px 30px 60px;
-    
   }  
-  
 }
 

@@ -1,3 +1,106 @@
 .FicheLogement{
-  padding-bottom: 200px;
+  .topSection{
+    display: flex;
+    width:100%;
+    padding-left: 60px;
+    padding-right: 60px;
+    justify-content: space-between;
+    color:$color-1;
+    h2{
+      font-size:36px;
+      margin-top: 30px;
+      line-height: 142.6%;
+    }
+    h3{
+      font-size: 18px;
+      line-height: 142.6%;
+      font-weight: lighter;
+    }
+    .rightTopSection{
+      display: flex;
+      margin-top: 24px;
+      .nameContainer{
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        margin-right: 10px;
+        align-items: flex-end;
+        h3{
+          display: flex;
+          flex-direction: column;
+          font-weight: lighter;
+        }
+      }
+      .pictureContainer{
+        border-radius: 50%;
+        overflow: hidden;
+        width: 64px;
+        height: 64px;
+        img{
+          width: 100%;
+          height: 100%;
+          display: flex;
+          object-fit: cover;
+        }
+      }
+      
+    }
+  }
+  .middleSection{
+    display: flex;
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 60px;
+    justify-content: space-between;
+    .leftMiddleSection{
+      display:flex;
+      color: $color-3;
+      margin-top: 25px;
+      font-size: 14px;
+      flex-wrap: wrap;
+      
+      h3{
+        display: flex;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        font-weight: lighter;
+        background-color: $color-1;
+        margin-right: 10px;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        
+      }
+    }
+    .rightMiddleSection{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      width :30%;
+      font-size: 30px;
+      flex-wrap: nowrap;
+      svg{
+        margin: 4px;
+      }
+    }
+  }
+  .bottomSection{
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 400px;
+    ul{
+      li{width: 100%;}
+    }
+    .left{
+      margin-right: 38px;
+    }
+    .right{
+      margin-left: 38px;
+    }
+  }
 }
+
