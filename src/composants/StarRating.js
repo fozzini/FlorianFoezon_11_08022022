@@ -5,8 +5,8 @@ const StarRating = ({rating}) => {
    let rate = parseInt(stringRate[0]);
   return (
     <div className="StarRating">
-      {[...Array(rate)].map(star => {return <FaStar className="StarOn"/>;})}
-      {[...Array(5-rate)].map(star => {return <FaStar/>;})}
+      {[...Array(rate)].map((star,index) => {return <FaStar key={index} className="StarOn"/>;})}
+      {[...Array(5-rate)].map((star, index) => {return <FaStar key={index}/>;})}
     </div>
   );
 };
