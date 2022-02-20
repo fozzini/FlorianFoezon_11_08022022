@@ -1,6 +1,8 @@
-import Accordeon from "../composants/Accordeon";
+
+import Accordion from "../composants/Accordeon";
 import Footer from "../composants/Footer";
 import Header from "../composants/Header";
+import AccordeonData from "../datas/AccordeonData";
 
 
 const Apropos = () => {
@@ -12,7 +14,10 @@ const Apropos = () => {
           <img src="./img/banner2.png" alt="banner2"/>
         </div>
       </section>
-      <Accordeon/>  
+      <ul className="accordion">
+          {AccordeonData
+          .map(({ heading, content }) => (<Accordion key={content} heading={heading} content={content} />))}
+      </ul>  
       <Footer/>
     </div>
   );

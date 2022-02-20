@@ -1,16 +1,7 @@
 
 import React, { useState } from "react";
-import AccordeonData from "../datas/AccordeonData";
 import { FaAngleUp } from 'react-icons/fa';
 import { FaAngleDown } from 'react-icons/fa';
-
-const Accordeon = () => {
-    return (
-        <ul className="accordion">
-          {AccordeonData.map(({ heading, content }) => (<Accordion key={content} heading={heading} content={content} />))}
-        </ul>
-    );
-};
 
 const Accordion = ({ heading, content }) => {
     const [isActive, setIsActive] = useState(false);
@@ -22,6 +13,6 @@ const Accordion = ({ heading, content }) => {
         {isActive && <div className="accordion-content">{content}</div>}
       </li>
     );
-  };
+};
 
-export default Accordeon;
+export default Accordion;
