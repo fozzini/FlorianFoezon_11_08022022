@@ -1,9 +1,10 @@
 .Home{
-  width: 100%;
   margin-bottom: 200px;
   .Banner{
       display: flex;
       height: 98%;
+      width: 100%;
+      
       position:relative;
       filter: brightness(0.5);
       img{
@@ -16,6 +17,8 @@
   .Section{
     height: 223px;
     position: relative;
+    padding-left: 60px;
+    padding-right: 60px;
     
     h3{
       font-style: normal;
@@ -36,15 +39,25 @@
     }
   }
   .Cards{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 50px;
-    padding: 50px;
+    // display: grid;
+    // grid-template-columns: auto auto auto;
+    // gap: 50px;
+    display: flex;
+    margin-top :60px;
+    margin-left: 60px;
+    margin-right: 60px;
+    padding: 25px;
+    
+    
+    flex-wrap: wrap;
     justify-content: space-evenly ;
-    height: auto;
+    
     background-color: $color-4;
     border-radius: 25px;
-    margin:30px 60px 30px 60px;
+    // margin:30px 60px 30px 60px;
+    a{
+      margin:20px;
+    }
   }  
 }
 

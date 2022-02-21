@@ -4,6 +4,7 @@
   width: 100%;
   color:$color-3;
   position: relative;
+  flex-direction: column;
   
   .SlideImage{
     display: flex;
@@ -36,6 +37,14 @@
       font-size: 4rem;
       color:$color-3;
     }
+  }
+  .pageNumber{
+    display: flex;
+    position: absolute;
+    font-size: 18px;
+    bottom: 25px;
+    left:50%;
+    right:50%;
   }
 }
 

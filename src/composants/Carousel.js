@@ -19,7 +19,8 @@ const Carousel = ({ slideData }) => {
         <FaChevronLeft className="left-arrow" onClick={prevSlide} />
         <img src={slideData.pictures[current]} alt={current} />
         <FaChevronRight className="right-arrow" onClick={nextSlide} />
-      </div>;
+      </div>
+      <h3 className="pageNumber">{current +1}/{length}</h3>
     </div>
   );
 };
