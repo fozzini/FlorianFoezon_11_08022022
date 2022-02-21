@@ -19,5 +19,17 @@
     background-size: 100%;
     object-fit:cover ;
   }
+  @media (max-width: 400px){
+    height: 18rem;
+    width: 18rem;
+  }
+  @media (max-width: 350px){
+    height: 14rem;
+    width: 14rem;
+  }
+  @media (max-width: 280px){
+    height: 10rem;
+    width: 10rem;
+  }
 }
 

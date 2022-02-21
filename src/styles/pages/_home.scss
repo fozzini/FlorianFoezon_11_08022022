@@ -4,7 +4,6 @@
       display: flex;
       height: 98%;
       width: 100%;
-      
       position:relative;
       filter: brightness(0.5);
       img{
@@ -39,25 +38,50 @@
     }
   }
   .Cards{
-    // display: grid;
-    // grid-template-columns: auto auto auto;
-    // gap: 50px;
     display: flex;
     margin-top :60px;
     margin-left: 60px;
     margin-right: 60px;
     padding: 25px;
-    
-    
     flex-wrap: wrap;
     justify-content: space-evenly ;
-    
     background-color: $color-4;
     border-radius: 25px;
-    // margin:30px 60px 30px 60px;
     a{
       margin:20px;
     }
   }  
+  @media (max-width: 850px){
+    .Section{
+      h3{
+        font-size: 36px;
+      }
+    }
+  }
+  @media (max-width: 660px){
+    .Section{
+      h3{
+        font-size: 24px;
+      }
+    }
+  }
+  @media (max-width: 500px){
+    .Section{
+      padding-left: 20px;
+      padding-right: 20px;
+      height: 120px;
+      h3{
+       padding-left: 30px;
+       padding-right: 30px;
+      }
+    }
+    .Cards{
+      margin-top :20px;
+      margin-left: 20px;
+      margin-right: 20px;
+      padding: 10px;
+    }
+    
+  }
 }
 

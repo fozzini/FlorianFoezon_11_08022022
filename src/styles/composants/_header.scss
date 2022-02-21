@@ -34,4 +34,42 @@
     text-align: center;
     width: 150px;
   }
+  @media (max-width: 500px){
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 15px;  
+    padding-top: 15px;  
+    .Navigation{
+      a{
+        h3{
+          margin-left: 20px;
+        }
+      }
+      a.active{
+        h3{
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 400px){
+    .Navigation{
+      a{
+        h3{
+          margin-left: 10px;
+        }
+      }
+      a.active{
+        h3{
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+  @media (max-width: 333px){
+    .Navigation{
+      flex-direction: column;
+    }
+  }
 }

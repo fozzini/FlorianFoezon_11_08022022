@@ -1,6 +1,6 @@
 .Apropos{
   height: auto;
-  padding-bottom: 300px;
+  padding-bottom: 500px;
  .Section{
     height: 223px;
     position: relative;
@@ -18,7 +18,26 @@
   }
   ul{
     display:flex;
-    padding-bottom:400px;}
+    padding-bottom:400px;
+  }
+  @media (max-width: 750px){
+    padding-bottom: 700px;
+    .Section{
+      height: 180px;
+    }
+
+  }
+  @media (max-width: 440px){
+    padding-bottom: 1300px;
+   .Section{
+    height: 120px;
+    padding-left: 20px;
+    padding-right: 20px;
+     .Banner{
+     
+     }
+   }
+  }
 }
 
 

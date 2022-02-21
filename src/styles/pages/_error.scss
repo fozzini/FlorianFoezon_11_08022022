@@ -25,7 +25,52 @@
     color :$color-1;
     margin-top: 182px;
     text-decoration:underline solid $color-1;
-   
+  }
+  @media (max-width: 950px){
+
+    h1{
+      font-size: 150px;
+      line-height: 200px;
+      
+    }
+    .messageError{
+      font-size: 18px;
+      line-height: 26px;
+    
+    }
+    .linkError{
+      font-size: 12px;
+      line-height: 13px;
+      margin-top: 90px;
+    }
+  }
+  @media (max-width: 470px){
+
+    h1{
+      font-size: 150px;
+      line-height: 200px;
+      
+    }
+    .messageError{
+      font-size: 18px;
+      line-height: 26px;
+      padding-left: 20px;
+      padding-right: 20px;
+    
+    }
+    .linkError{
+      font-size: 12px;
+      line-height: 13px;
+      margin-top: 90px;
+    }
+  }
+  @media (max-width: 470px){
+
+    h1{
+      font-size: 100px;
+      line-height: 200px;
+      
+    }
   }
 }
 
