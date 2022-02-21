@@ -4,6 +4,7 @@
   .Banner{
       display: flex;
       height: 98%;
+      position:relative;
       filter: brightness(0.5);
       img{
         width: 100%;
@@ -15,24 +16,23 @@
   .Section{
     height: 223px;
     position: relative;
-    .cardTitle{
-      h3{
-        font-style: normal;
-        font-weight: 500;
-        font-size: 48px;
-        line-height: 142.6%;
-        display: flex;
-        width: 100%;
-        color:$color-3;
-        position:absolute;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;   
-      }
+    
+    h3{
+      font-style: normal;
+      font-weight: 500;
+      font-size: 48px;
+      line-height: 142.6%;
+      display: flex;
+      width: 100%;
+      color:$color-3;
+      position:absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;   
     }
   }
   .Cards{

@@ -7,26 +7,24 @@ import StarRating from "../composants/StarRating"
 
 const FicheLogement = ({data}) => {
     const { id } = useParams();
-    const colorStar = () => {
-
-    }
+    
   return (
     <div className="FicheLogement">
       <Header/>
       {data
-        .filter((element) => element.id === id)
-        .map((element, index) => (
-        <>
+      .filter((element) => element.id === id)
+      .map((element, index) => (
+        <div key={index}>
           <Carousel slideData={element} key={index}/>
           <div className='topSection'>
             <div className='leftTopSection'>
               <h2>{element.title}</h2>
-              <h3>{element.location}</h3>
+              <h3 key="location">{element.location}</h3>
             </div>
             <div className='rightTopSection'>
               <div className='nameContainer'>{element.host.name
               .split(" ")
-              .map((elmt) => <h3>{elmt}</h3>)}
+              .map((elmt) => <h3 key={elmt} >{elmt}</h3>)}
               </div> 
               <div className='pictureContainer'>
                 <img src={element.host.picture} alt="propriétaire"/>
@@ -35,17 +33,17 @@ const FicheLogement = ({data}) => {
           </div>
           <div className='middleSection'>
             <div className='leftMiddleSection'>
-              {element.tags.map((tag, index) => <h3 key={index}>{tag}</h3>)}
+              {element.tags.map((tag) => <h3 key={tag}>{tag}</h3>)}
             </div>
             <div className='rightMiddleSection'>
               <StarRating rating={element.rating} key={element.id}/>
             </div>
           </div>  
           <div className='bottomSection'>
-            <ul className="accordion left"><Accordion heading="Description" content={element.description}/></ul>
-            <ul className="accordion right"><Accordion heading="Equipements" content={element.equipments.map((equipment) => <li>{equipment}</li>)}/></ul>
+            <ul className="accordion left" ><Accordion heading="Description" content={element.description} key="accordeon1"/></ul>
+            <ul className="accordion right"><Accordion heading="Equipements" content={element.equipments.map((equipment) => <div key={equipment}>{equipment}</div> )} key="accordeon2"/></ul>
           </div>
-        </>
+        </div>
         ))
       }
       <Footer/>
