@@ -16,18 +16,52 @@
   flex-direction: row;
   justify-content: space-between;
   background-color: $color-1;
-  padding: 1em;
+  align-content: center;
   color:$color-3;
   border-radius: 5px;
-  margin-top: 20px;;
+  margin-top: 20px;
+  span{
+    align-items: center;
+    svg{
+      font-size: 40px;
+      font-weight: lighter;
+      
+    }
+  }
 }
 }
 .accordion-toggle h3 {
-  margin: 0;
+  display: flex;
+  margin-left: 20px;
+  font-weight: lighter;
   border-radius: 10px;
+  align-items: center;
 }
 .accordion-content {
   background-color:$color-4;
   padding: 1em;
   color:$color-1;
+}
+@media (max-width: 366px){
+  .accordion{
+    .accordion-item{
+      .accordion-toggle{
+        h3{
+          font-size: 12px;
+          margin-left: 10px;
+        }
+        span{
+          display:flex;
+          svg{
+            font-size: 20px;
+            padding-right: 10px;
+          }
+        }
+      }
+      .accordion-content{
+        font-size: 12px;
+      }
+    }
+  }
+  
 }

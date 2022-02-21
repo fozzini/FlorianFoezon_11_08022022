@@ -46,6 +46,29 @@
     left:50%;
     right:50%;
   }
+  @media (max-width: 1000px){
+    height: 40vh;
+    
+  }
+  @media (max-width: 500px){
+    .SlideImage{
+      .right-arrow {
+        right: 20px;
+        font-size: 2rem;
+        font-weight: lighter;
+        top:50%
+      }
+      .left-arrow {
+        left: 20px;
+        font-size: 2rem;
+        font-weight: lighter;
+        top:50%;
+      } 
+    }
+  }
+  @media (max-width: 366px){
+    height: 30vh;
+  }
 }
 
 

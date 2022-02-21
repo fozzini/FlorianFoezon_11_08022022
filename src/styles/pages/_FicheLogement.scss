@@ -1,7 +1,11 @@
 .FicheLogement{
-  .topSection{
+  .logementSection{
+  display: flex;
+  justify-content: space-between;
+    .leftSection{
     display: flex;
-    width:100%;
+    flex-direction: column;
+    width:80%;
     padding-left: 60px;
     padding-right: 60px;
     justify-content: space-between;
@@ -16,42 +20,6 @@
       line-height: 142.6%;
       font-weight: lighter;
     }
-    .rightTopSection{
-      display: flex;
-      margin-top: 24px;
-      .nameContainer{
-        display: flex;
-        flex-direction: column;
-        margin-top: 10px;
-        margin-right: 10px;
-        align-items: flex-end;
-        h3{
-          display: flex;
-          flex-direction: column;
-          font-weight: lighter;
-        }
-      }
-      .pictureContainer{
-        border-radius: 50%;
-        overflow: hidden;
-        width: 64px;
-        height: 64px;
-        img{
-          width: 100%;
-          height: 100%;
-          display: flex;
-          object-fit: cover;
-        }
-      }
-      
-    }
-  }
-  .middleSection{
-    display: flex;
-    width: 100%;
-    padding-left: 60px;
-    padding-right: 60px;
-    justify-content: space-between;
     .leftMiddleSection{
       display:flex;
       color: $color-3;
@@ -73,6 +41,45 @@
         
       }
     }
+    }
+    .rightSection{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    padding-right: 60px;
+    align-items: flex-end;
+    
+    .rightTopSection{
+      display: flex;
+      margin-top: 24px;
+      margin-bottom: 25px;
+      flex-direction: row;
+      .nameContainer{
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        margin-right: 10px;
+        align-items: flex-end;
+        h3{
+          color: $color-1;
+          display: flex;
+          flex-direction: column;
+          font-weight: lighter;
+        }
+      }
+      .pictureContainer{
+        border-radius: 50%;
+        overflow: hidden;
+        width: 64px;
+        height: 64px;
+        img{
+          width: 100%;
+          height: 100%;
+          display: flex;
+          object-fit: cover;
+        }
+      }
+    }
     .rightMiddleSection{
       display: flex;
       flex-direction: row;
@@ -83,27 +90,208 @@
       svg{
         margin: 4px;
       }
+    } 
+  }
+  
+}
+.bottomSection{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 400px;
+  ul{
+    li{width: 100%;}
+  }
+  .left{
+    margin-right: 38px;
+    .accordion-toggle{
+      padding-top: 3px;
+      padding-bottom: 3px;
     }
   }
-  .bottomSection{
-    display: flex;
-    width: 100%;
-    height: auto;
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-bottom: 400px;
-    ul{
-      li{width: 100%;}
+  .right{
+    margin-left: 38px;
+    line-height: 26px; 
+  }
+}  
+  @media (max-width: 1000px){
+    .logementSection{
+    flex-direction: column;
+    .leftSection{
+      width:100%;
     }
-    .left{
-      margin-right: 38px;
+    .rightSection{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      padding-left: 60px;
+      padding-right: 60px;
+      align-items: center;
+      
+      .rightTopSection{
+        order: 2;
+        width: 50%;
+        justify-items: right;
+        flex-direction:row-reverse;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        .nameContainer{
+          order:1;
+          margin-top: 0;
+        }
+      }
+      .rightMiddleSection{
+        order: 1;
+        width: 50%;
+        flex-direction:row-reverse;
+      }
     }
-    .right{
-      margin-left: 38px;
-      line-height: 26px;
+    }
+  }
+  @media (max-width: 800px){
+    .logementSection{
+      .leftSection{
+        display: flex;
+        h2{
+          font-size:25px;
+          margin-top: 30px;
+          
+        }
+        h3{
+          font-size: 15px;
+          
+          margin-top: 10px;
+          
+        }
+        .leftMiddleSection{
+         
+          margin-top: 10px;
+          
+          flex-wrap: wrap;
+          h3{
+            font-size: 12px;
+            display: flex;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+          }
+        }
+      }
+      .rightSection{
+        .rightMiddleSection{
+          
+          font-size: 23px;
+          
+          svg{
+            margin: 4px;
+          }
+        }
+      }
+    }
+    .bottomSection{
+      display: flex;
+      width: 100%;
+      height: auto;
+      padding-left: 60px;
+      padding-right: 60px;
+      padding-bottom: 400px;
+      flex-direction: column;
+      .left{
+        height: auto;
+        display: flex;
+        margin-bottom: 10px;
+      }
+      .right{
+        height: auto;
+        display:flex;
+        margin-left: 0;
+      }
+    } 
+    .accordion-toggle h3 {
+      font-size: 15px;
+      
+    } 
+  }
+  @media (max-width: 500px){
+    .Slider{
+      .SlideImage{
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .pageNumber{
+        display:none;
+      }
+    }
+    .logementSection{
+      .leftSection{
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .rightSection{
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+    .bottomSection{
+      padding-left: 20px;
+      padding-right: 20px;
+    } 
+  }
+  @media (max-width: 366px){
+    .logementSection{
+      .leftSection{
+        display: flex;
+        h2{
+          font-size:18px;
+          margin-top: 20px;
+        }
+        h3{
+          font-size: 12px;
+          margin-top: 5px;
+        }
+        .leftMiddleSection{
+          margin-top: 5px;
+          h3{
+            font-size: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+          }
+        }
+      }
+      .rightSection{
+        .rightMiddleSection{
+          font-size: 16px;
+          svg{
+            margin: 4px;
+          }
+        }
+        .rightTopSection{
+          order: 2;
+          width: 50%;
+          justify-items: right;
+          flex-direction:row-reverse;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          .nameContainer{
+            h3{
+              font-size: 12px;
+            }
+          }
+          .pictureContainer{
+            height: 40px;
+            width: 40px;
+
+          }
+        }
+      }
       
     }
-    
   }
 }
 

@@ -16,29 +16,31 @@ const FicheLogement = ({data}) => {
       .map((element, index) => (
         <div key={index}>
           <Carousel slideData={element} key={index}/>
-          <div className='topSection'>
-            <div className='leftTopSection'>
-              <h2>{element.title}</h2>
-              <h3 key="location">{element.location}</h3>
+          <div className='logementSection'>
+            <div className='leftSection'>
+              <div className='leftTopSection'>
+                <h2>{element.title}</h2>
+                <h3 key="location">{element.location}</h3>
+              </div>
+              <div className='leftMiddleSection'>
+                {element.tags.map((tag) => <h3 key={tag}>{tag}</h3>)}
+              </div>
             </div>
-            <div className='rightTopSection'>
-              <div className='nameContainer'>{element.host.name
-              .split(" ")
-              .map((elmt) => <h3 key={elmt} >{elmt}</h3>)}
-              </div> 
-              <div className='pictureContainer'>
-                <img src={element.host.picture} alt="propriétaire"/>
+            <div className='rightSection'>
+              <div className='rightTopSection'>
+                <div className='nameContainer'>{element.host.name
+                .split(" ")
+                .map((elmt) => <h3 key={elmt} >{elmt}</h3>)}
+                </div> 
+                <div className='pictureContainer'>
+                  <img src={element.host.picture} alt="propriétaire"/>
+                </div>
+              </div>
+              <div className='rightMiddleSection'>
+                <StarRating rating={element.rating} key={element.id}/>
               </div>
             </div>
           </div>
-          <div className='middleSection'>
-            <div className='leftMiddleSection'>
-              {element.tags.map((tag) => <h3 key={tag}>{tag}</h3>)}
-            </div>
-            <div className='rightMiddleSection'>
-              <StarRating rating={element.rating} key={element.id}/>
-            </div>
-          </div>  
           <div className='bottomSection'>
             <ul className="accordion left" ><Accordion heading="Description" content={element.description} key="accordeon1"/></ul>
             <ul className="accordion right"><Accordion heading="Equipements" content={element.equipments.map((equipment) => <div key={equipment}>{equipment}</div> )} key="accordeon2"/></ul>
