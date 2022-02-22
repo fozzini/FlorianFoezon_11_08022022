@@ -3,6 +3,7 @@ import Card from "../composants/Card";
 import Footer from "../composants/Footer";
 import Header from "../composants/Header";
 import { Link } from "react-router-dom";
+import banner1 from "../assets/banner1.png"
 
 const Home = ({data}) => {
   return (
@@ -11,7 +12,7 @@ const Home = ({data}) => {
         <section className="Section">
           <h3>Chez vous, partout et ailleurs</h3>
           <div className="Banner">
-            <img src="/img/banner1.png" alt="banner1"/>
+            <img src={banner1} alt="banner1"/>
           </div>
         </section>
         <div className="Cards">

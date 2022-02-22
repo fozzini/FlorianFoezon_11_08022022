@@ -3,6 +3,7 @@ import Accordion from "../composants/Accordeon";
 import Footer from "../composants/Footer";
 import Header from "../composants/Header";
 import AccordeonData from "../datas/AccordeonData";
+import banner2 from "../assets/banner2.png"
 
 
 const Apropos = () => {
@@ -11,7 +12,7 @@ const Apropos = () => {
       <Header/>
       <section className="Section">
         <div className="Banner">
-          <img src="./img/banner2.png" alt="banner2"/>
+          <img src={banner2} alt="banner2"/>
         </div>
       </section>
       <ul className="accordion">

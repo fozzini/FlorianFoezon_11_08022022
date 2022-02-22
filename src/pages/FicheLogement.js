@@ -1,4 +1,5 @@
-import { useParams } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import Accordion from '../composants/Accordeon';
 import Carousel from '../composants/Carousel';
 import Footer from "../composants/Footer";
@@ -6,7 +7,14 @@ import Header from "../composants/Header";
 import StarRating from "../composants/StarRating"
 
 const FicheLogement = ({data}) => {
-    const { id } = useParams();
+  const { id } = useParams();
+  const exists = data.find(el => el.id === id);
+  let navigate = useNavigate();
+  useEffect(() => {
+    if (id && !exists) {
+      navigate("Error404");
+  } 
+  },);
     
   return (
     <div className="FicheLogement">
