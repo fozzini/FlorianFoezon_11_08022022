@@ -9,7 +9,7 @@ import StarRating from "../composants/StarRating"
 const FicheLogement = ({data}) => {
   const { id } = useParams();
   const exists = data.find(el => el.id === id);
-  let navigate = useNavigate();
+  const navigate = useNavigate();
   useEffect(() => {
     if (id && !exists) {
       navigate("Error404");
